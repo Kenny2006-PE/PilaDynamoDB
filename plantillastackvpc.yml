@@ -1,0 +1,15 @@
+AWSTemplateFormatVersion: "2010-09-09"
+Resources:
+  Instancia3:
+    Type: "AWS::EC2::Instance"
+    Properties:
+      ImageId: "ami-0885b1f6bd170450c"
+      KeyName: "Lab15"
+      InstanceType: "t2.micro"
+      SecurityGroupIds:
+        - "sg-082558ed9cefe8700"
+  ElasticIP3:
+    Type: "AWS::EC2::EIP"
+    Properties:
+      InstanceId: 
+        Ref: Instancia3
