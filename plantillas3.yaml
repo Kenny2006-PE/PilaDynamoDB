@@ -1,0 +1,11 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Description: Plantilla para crear un S3 publico
+Resources:
+  MyPublicBucket:
+    Type: AWS::S3::Bucket
+    Properties:
+      BucketName: bucket-publico-lab15-kpalacin-270625
+Outputs:
+  BucketName:
+    Value: !Ref MyPublicBucket
+    Description: Nombre del bucket S3 creado
