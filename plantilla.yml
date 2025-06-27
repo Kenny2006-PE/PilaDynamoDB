@@ -1,0 +1,16 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Resources:
+  MyDynamoTable:
+    Type: AWS::DynamoDB::Table
+    Properties:
+      TableName: MySimpleTable
+      AttributeDefinitions:
+        - AttributeName: id
+          AttributeType: S
+      KeySchema:
+        - AttributeName: id
+          KeyType: HASH
+      BillingMode: PAY_PER_REQUEST
+Outputs:
+  TableName:
+    Value: !Ref MyDynamoTable
