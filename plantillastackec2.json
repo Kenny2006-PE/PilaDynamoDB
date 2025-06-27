@@ -5,7 +5,7 @@
       "Type": "AWS::EC2::Instance",
       "Properties": {
         "ImageId": "ami-0885b1f6bd170450c",
-        "KeyName": "key",
+        "KeyName": "[COLOCA EL NOMBRE DEL PAR DE CLAVES QUE CREASTE ANTERIORMENTE]",
         "InstanceType": "t2.micro",
         "SecurityGroupIds": [
           "[COLOCA TU SECURITY GROUP ID AQUI]"
